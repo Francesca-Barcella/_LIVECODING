@@ -1,1 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+}
+
+body{
+    background-color: rgba(255, 0, 0, 0.499);
+}
+
+.col{
+    width: calc(100% / 4);
+    float: left;
+    padding: 10px 10px;
+}
