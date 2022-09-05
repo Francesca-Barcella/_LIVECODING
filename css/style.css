@@ -27,4 +27,5 @@ body{
     width: calc(100% / 4);
     float: left;
     padding: 10px 10px;
+    background-color: orange;
 }

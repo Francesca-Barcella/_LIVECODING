@@ -1,0 +1,42 @@
+/* #region common */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clearfix{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* #endregion common */
+
+[class^="col-"]{
+    padding: 0 1rem;
+}
+
+.col-3{
+    width: calc( (100% / 12) * 3);
+}
+
+.col-9{
+    width: calc( (100% / 12) * 9);
+}
