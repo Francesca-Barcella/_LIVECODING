@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.red{
+.red {
     width: 200px;
     height: 200px;
     background-color: red;
@@ -19,8 +19,21 @@
         left: 0;
     }
 
-    20%{
+    20% {
         top: 0;
-        left: 200px;
+        left: calc(100% - 200px);
+    }
+
+    40% {
+        top:  calc(100% - 200px);
+        left:  calc(100% - 200px);
+    }
+    60%{
+        top:  calc(100% - 200px);
+        left: 0;
+    }
+    80%{
+        top: 0;
+        left: 0;
     }
 }
