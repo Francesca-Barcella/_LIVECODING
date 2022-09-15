@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-.container {
+/* 1° esercizio */
+
+.container_m {
     max-width: 1140px;
     margin: auto;
     background-color: lightblue;
@@ -22,13 +24,13 @@ h1 {
         font-size: 30px;
     }
 
-    .container{
+    .container_m{
         background-color: lightyellow;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .container{
+    .container_m{
         background-color: violet;
     }
 
@@ -92,15 +94,16 @@ img{
     margin-left: 20px;
 }
 
+@media screen and (min-width: 1440px) {
+    .rectangle{
+        background-color: fuchsia;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .rectangle{
         background-color: green;
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .rectangle{
-        background-color: fuchsia;
-    }
-}
 
