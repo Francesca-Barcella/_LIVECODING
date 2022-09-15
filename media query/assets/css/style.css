@@ -1,17 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
-    /* width: 1170px; */
+.container {
     max-width: 1140px;
     margin: auto;
     background-color: lightblue;
 }
 
-h1{
+h1 {
     padding: 0.5rem;
     font-size: 20px;
 }
@@ -55,8 +54,29 @@ h1{
     }
 } */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container{
         background-color: green;
     }
+} */
+
+.container_loghi {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    max-width: 100%;
+    border: 1px solid red;
+}
+
+.container_loghi img{
+    width: 200px;
+    padding: 0.5rem;
+}
+
+@media screen and () {
+    
 }
