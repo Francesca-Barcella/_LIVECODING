@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    /* width: 1170px; */
+    max-width: 1140px;
+    margin: auto;
+    background-color: lightblue;
+}
+
+h1{
+    padding: 0.5rem;
+    font-size: 20px;
+}
+
+/* mobile first */
+
+/* @media screen and (min-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .container{
+        background-color: lightyellow;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container{
+        background-color: violet;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    p{
+        color: red;
+    }
+} */
+
+/* desktop first */
+/* @media screen and (max-width: 1024px) {
+    .container{
+        background-color: brown;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        background-color: lightgreen;
+    }
+} */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container{
+        background-color: green;
+    }
+}
