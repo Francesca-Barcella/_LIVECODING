@@ -18,7 +18,7 @@ createApp({
     }
 }).mount('#app'); */
 
-/* const {createApp} = Vue
+const {createApp} = Vue
 createApp ({
     data (){
         return{
@@ -27,10 +27,28 @@ createApp ({
         }
     },
     methods: {
-        changColor: function(){
+        changeColor: function(){
             console.log('clicked');
             this.textColor = "colorBlue"
 
         }
     }
-}).mount('#app_2') */
+}).mount('#app_2')
+
+/* const { createApp } = Vue;
+
+createApp({
+    data() {
+        return {
+            message: 'hello',
+            text: 'ecco il nostro esercizio',
+            color: 'color'
+        }
+    },
+    methods: {
+        newText() {
+            console.log(this.text);
+            this.text = 'testo cambiato'
+        }
+    }
+}).mount('#app_3'); */
