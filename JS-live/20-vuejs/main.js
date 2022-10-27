@@ -6,7 +6,7 @@ Al click di un bottone il titolo diventerà blu.
  */
 
 
-/* 
+
 const { createApp } = Vue
 
 createApp({
@@ -16,9 +16,9 @@ createApp({
             lastname: ''
         }
     }
-}).mount('#app'); */
+}).mount('#app');
 
-const {createApp} = Vue
+/* const {createApp} = Vue
 createApp ({
     data (){
         return{
@@ -33,7 +33,7 @@ createApp ({
 
         }
     }
-}).mount('#app_2')
+}).mount('#app_2') */
 
 /* const { createApp } = Vue;
 

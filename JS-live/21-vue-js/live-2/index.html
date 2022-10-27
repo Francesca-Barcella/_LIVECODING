@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>live import export</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>live 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -15,34 +14,26 @@
 </head>
 
 <body>
-<!-- #region live 1 -->
-   <div id="app">
-        <input type="text" v-model="name">
-        <input type="text" v-model="lastname">
-        <p>ciao {{name + ' ' + lastname}}</p>
-    </div> 
-<!-- #endregion live 1 -->
 
-<!-- #region live 2 -->
-<!-- <div id="app_2">
-    <h1 v-bind:class="text_color">{{title}}</h1>
-    <button v-on:click="changeColor">Click me!</button>
-</div> -->
-<!-- #endregion live 2 -->
+    <div id="app" class="d-flex">
 
-<!-- #region live 3-->
-<!-- <div id="app_3">
-    <h1>{{message}}</h1>
-    <p v-bind:class="color">{{text}}</p>
-    <button @click="newText">Click me!</button>
-</div> -->
-<!-- #endregion live 3-->
+        <div class="mx-3">
+            <ul>
+                <li v-for="n in 50">{{n}}</li>
+            </ul>
+        </div>
 
-   
+        <div class="mx-3">
+            <ul>
+                <li v-for="n in max">{{n}}</li>
+            </ul>
+        </div>
+
+    </div>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./main.js" type="module"> </script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
