@@ -17,9 +17,9 @@ createApp({
     data() {
 
         return {
-
+            //in newTask verranno inseriti i valori digitati nell'input tramite v-model
             newTask: '',
-
+            //assegno valore false di default perchè inizialmente il messaggio non sid eve vedere
             error: false,
             tasks: [
                 'learn HTML',
@@ -30,10 +30,20 @@ createApp({
     },
 
     methods: {
-
+        //funzione che restituirà un qualcosa al @click="addTask"
         addTask() {
             console.log('ho cliccato su add task');
             //console.log('valore input = ' + this.newTask);
+
+            //array.push(element) - così inserisce alla fine dell'elemento su cui sta pushando
+            //this.tasks.push(this.newTask)
+
+            //con unshit lo pushiamo all'inizio dell'elemento del dom
+            //[unshift === non spostato]
+            //this.tasks.unshift(this.newTask)
+
+            //svuotare input al click del button
+            //this.newTask=''
 
             //devono inserire almeno 5 caratteri
             if (this.newTask.length < 5) {
@@ -52,6 +62,9 @@ createApp({
             //tolgo dall'elemento l'elemento attivo che si pesca con il parametro index rilevato al click sullìicona con v-on - 1 indica che tolgie 1 elemento 8se metto due toglie anche l'<li></li> successivo
             this.tasks.splice(index, 1)
         }
+
     },
+
+
 
 }).mount('#app');
