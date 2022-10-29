@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="container m-5">
+            <h3 class="my-4">Add new task</h3>
+            <div class="addTasks">
+                <!-- 
+                    v-model crea un v-bind a doppia direzione - prende dall'input e inserisce nella proprieta nell'oggetto data
+
+                    v-model="nomeProprietà" (newTask)-> nomeProprietà da inserire nell'oggetto data come proprietà con stringa vuota.
+                -->
+                <input class="me-2" type="text" placeholder="Insert New Task" v-model="newTask" @keyup.enter="addTask"></input>
+                <!-- @click="nomeFunzione" (addTask) 
+                     è la forma abbreviata di 
+                     v-on:click="nomeFunzione" (addTask) 
+                -->
+                <button @click="addTask">Add New Task</button>
+                <!-- soluzion V-SHOW - la scritta apapre all'inizio perchè l'input è vuota e quando iniziamo a scrivere ed arriviamo a 5 caratteri sparisce il messaggio di errore-->
+                <!-- <small class="text-danger" v-show="this.newTask.length < 5">Devi inserire almeo 5 carattetri</small> -->
+
+                <small class="text-danger ms-2" v-show="error">Devi inserire almeo 5 carattetri</small>
+            </div>
+
+            <div class="taskList">
+                <h3 class="my-4">Todo List</h3>
+                <ul>
+                    <!-- ciclo for in cui indico che deve prendere il SINGOLO ELEMENTO (TASK) dal TOTALE DELL'ARRAY  (TASKS) e nell'li metto il SINGOLO ELEMENTO (TASK)
+                    TASK come singolo non lo devo più creare io ma si genera in automatico con vue
+                    *********************************************************
+                    <li> <v-for="singolo in gruppo>{{singolo}}"</li>-->
+
+                    <li v-for="task in tasks">{{task}}</li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
